@@ -1,0 +1,171 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  background-color: gray;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 13vh;
+  background-color: #163E7B;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  text-align: right;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 76008px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    overflow-x: hidden;
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 13vh;
+    background-color: #7A98C5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navlinks li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.logoimage {
+  vertical-align: middle;
+}
+
+h6 {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+h1 {
+  text-align: center;
+  font-family: "Poppins", "Cambria", sans-serif;
+  font-size: 75px;
+  color: white;
+  font-style: normal;
+  padding: 5px;
+}
+
+.Us {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 5px;
+  font-family: sans-serif;
+  padding-top: 30px;
+}
+
+.Arnav {
+  text-align: center;
+  font-style: "Times New Roman", sans-serif;
+  font-size: 25px;
+  border: 20px solid #DADADA;
+  padding-bottom: 0;
+}
+
+.Info {
+  text-align: center;
+  font-style: "Times New Roman", sans-serif;
+  font-size: 50px;
+  color: white;
+  background-color: #7A98C5;
+}
+h4 {
+  color: white;
+}
+
+h7 {
+  font-size: 25px;
+}
