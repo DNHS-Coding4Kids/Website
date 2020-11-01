@@ -1,306 +1,58 @@
-html,
-body {
-  overflow-x: hidden;
-}
-body {
-  position: relative;
-}
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+html  {
+  scroll-behavior: smooth;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 13vh;
-  background-color: #163E7B;
-  font-family: "Poppins", sans-serif;
+.buttons {
+  background-color:#f8ac54;
+  border-radius:18px;
+  padding:10px;
+  color:#303030;
+  font-weight:bold;
+  font-family: Itim;
+  font-size:1.5em;
+  position:relative;
+  top:30px;
+  box-shadow: 0px 0px 5px black;
 }
 
-.logo {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  ont-weight: bold;
-  font-size: 15px;
-}
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
-.nav-links li {
-  list-style: none;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
+.sectionTitle {
+  font-family: Itim;
+  font-size:3em;
+  padding-top:1em;
+  padding-bottom:-1em;
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
+.sectionDescription {
+  font-family: Itim;
+  font-size:1.5em;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  align: right;
-  margin: 5px;
-  transition: all 0.3s ease;
+
+.section1 {
+  background: linear-gradient(to right, #f5f5f5, #dbdbdb);
+  width:100%;
+  height:400px;
 }
 
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    overflow-x: hidden;
-    width: 60%;
-    display: none;
+.section2 {
+  background: linear-gradient(to right, #303030, #202020);
+  width:100%;
+  height:300px;
+}
+
+.section3 {
+  background: linear-gradient(to right, #f5f5f5, #dbdbdb);
+  width:100%;
+  height:350px;
+}
+
+.footer {
+  background-color:#f8ac54;
+  width:100%;
+  display:inline-block;
+}
+
+a.buttons:hover {
+    color: #303030;
+    text-decoration: none;
   }
-}
-
-@media screen and (max-width: 76008px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 80vh;
-    top: 13vh;
-    background-color: #7A98C5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-  .navlinks li {
-    opacity: 0;
-  }
-  .burger {
-    display: block;
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.logoimage {
-  vertical-align: middle;
-}
-
-h1 {
-  padding-bottom: 50px;
-  text-align: center;
-  font-family: "Poppins", "Cambria", sans-serif;
-  font-size: 55px;
-  color: white;
-  font-style: normal;
-}
-
-body {
-  overflow-x: hidden;
-  background-image: url("https://cdn.glitch.com/ff57477a-cb3a-4447-b567-6b06dc7e9bc2%2FOcean.jpg?v=1591319808556");
-  background-repeat: no-repeat;
-  background-color: #7A98C5;
-  background-size: 1920px 1080px;
-}
-
-p {
-  text-align: center;
-  left-margin: auto;
-  right-margin: auto;
-  font-family: "Arial", sans-serif;
-  font-size: 22px;
-  background-color: #163E7B;
-  color: white;
-}
-
-.container {
-  text-align: center;
-  margin-top: 0px;
-  background-color: #7A98C5;
-}
-
-.container-two {
-  text-align: center;
-  margin-top: 0px;
-  background-color: #163E7B;
-}
-
-.how-it-works-button {
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: "montserrat", sans-serif;
-  cursor: pointer;
-  margin: 5px;
-  transition: 0.8s;
-  position: relative;
-  overflow: hidden;
-  background-color: #EF6D03;
-  color: white;
-}
-
-.how-it-works-button::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #7F86A1;
-  z-index: -1;
-  transition: 0.8s;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-.donate-button {
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: "montserrat", sans-serif;
-  cursor: pointer;
-  margin: 5px;
-  transition: 0.8s;
-  position: relative;
-  overflow: hidden;
-  background-color: #EF6D03;
-  color: white;
-}
-
-.donate-button::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #EF6D03;
-  z-index: -1;
-  transition: 0.8s;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-.about-us-button {
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: "montserrat", sans-serif;
-  cursor: pointer;
-  margin: 5px;
-  transition: 0.8s;
-  position: relative;
-  overflow: hidden;
-  background-color: #EF6D03;
-  color: white;
-}
-
-.about-us-button::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #7F86A1;
-  z-index: -1;
-  transition: 0.8s;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-.contact-us-button {
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: "montserrat", sans-serif;
-  cursor: pointer;
-  margin: 5px;
-  transition: 0.8s;
-  position: relative;
-  overflow: hidden;
-  background-color: #EF6D03;
-  color: white;
-}
-
-.contact-us-button::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #7F86A1;
-  z-index: -1;
-  transition: 0.8s;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-h6 {
-  text-align: center;
-  left-margin: auto;
-  right-margin: auto;
-  font-family: "Arial", sans-serif;
-  font-size: 22px;
-  background-color: #EF6D03;
-  color: white;
-}
-
-h6 {
-  font-size: 15px;
-  text-align: center;
-}
-
-.homeless-man-image {
-  background-image: url(https://images.squarespace-cdn.com/content/v1/5b522949d274cb978f78080d/1533665445627-OPLQAVVY0MDPH71CI9MN/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/wonderful-san-diego-wallpaper-45669-46917-hd-wallpapers.jpg?format=2500w);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: lighten;
-}
-
-.part-one{
-  border: 10px solid white;
-}
-
-.part-two{
-  border: 10px solid white;
-}
-.part-three{
-  border: 10px solid white;
-}
-
-.opener{
-  padding-top: 50px;
-  padding-bottom: 106px;
-}

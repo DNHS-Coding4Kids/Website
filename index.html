@@ -1,156 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, " />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Coding For Kids</title>
+    <!-- import fonts and stylesheets(bootstrap and fontawesome) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Coding4Kidz</title>
+
+    <style> 
+  
+    </style>
+
   </head>
 
   <body>
-    <nav>
-      <div class="logo">
-        <h4>
-          <a style="text-decoration:none" href="index.html">
-            <img
-              class="logoimage"
-              src="data:image/png;base64,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"
-              alt="Coding For Kids"
-              style="width:25px;height:25px;border:0;"
-            />
-          </a>
-          <a style="text-decoration:none; color: white;" href="index.html"
-            >Home
-          </a>
-        </h4>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="donate-kits.html">Sign Up</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-
-        <li>
-          <a href="contact.html">Contact Us</a>
-        </li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+    <div style="position:fixed; min-width:100%; box-shadow:0px 1px 5px black;z-index:1">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f8ac54;">
+      <a class="navbar-brand" href="#"><img src="images/coding4kidspp.png" width="40" height="40" style="border-radius:25px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="#home"><b>HOME</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="#signup"><b>SIGN UP</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="#branchclub"><b>BRANCH CLUB</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="#dnhs"><b>DNHS</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="about.html"><b>ABOUT</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="color:black;" class="nav-link" href="#contact"><b>CONTACT US</b></a>
+          </li>
+        </ul>
       </div>
     </nav>
-    <div class="opener">
-    <h1>Coding for Kids</h1>
-    <img
-      class="largehomeimage"
-      style=" display: block; margin-left: auto; margin-right: auto; width:350px; height:300px; "
-      src="https://cdn.glitch.com/ff57477a-cb3a-4447-b567-6b06dc7e9bc2%2FCKC.png?v=1591935439945"
-      alt="Coding For Kids;"
-    />
+  </div>
+
+    <div id="home">
+      <center><img style="margin-top:69px" class="home-image" src="images/homeimage.png" width=100% height=100%></center>
     </div>
-    <div class="part-one">
+
+    <div id="signup" class="section1">
+      <center>
+      <p class="sectionTitle" >DNHS Branch Sign Ups</p>
+      <p class="sectionDescription" >Session 2: 10/24/2020 - 12/12/2020</p>
+      <p class="sectionDescription" >If you are not part of the DNHS branch,<br> contact a Coding4Kidz branch in your region.</p>
       <p>
-        ------<br />
-       Stuff StuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuffStuff<br>StuffStuff
-        The kits will be donated to <br> <a style="color: white" href="https://my.neighbor.org/">Father Joes Village</a>
-        <br/>
-        ------
+        <a target="blank" style="right:10px" class="buttons" href="http://bit.ly/c4k-signup-s2">SignUp Form</a>
+        <a target="blank" style="left:10px" class="buttons" href="images/flyers/c4k-flyer-2020-2021.jpg" >View Flyer</a>
       </p>
-    </div>
-    <div class="homeless-man-image">
-    <img
-      class="homeless-man-image"
-      style=" background-color #163E7B; display: block;  width:420px; height:auto; display: block; margin-left: auto; margin-right: auto; background-color: #EF6D03"
-      src="https://cdn.glitch.com/ff57477a-cb3a-4447-b567-6b06dc7e9bc2%2Fthumbnails%2FHomelessCount0101422561730.png?1594680676376"
-      alt="Coding For Kids;"
-    />
-    </div>
-    <div class="part-two">
-      <p style="background-color:#7A98C5">
-        ------<br />
-        At the beginning <br />
-        of 2020 there were roughly 7,619 <br />homeless in San Diego.<br> 
-        Due to COVID-19, <br />h the homeless population is <br>predicted to 
-        grow significantly.<br />Your donation of a kit can improve <br> the life of someone in need!<br />
-      </p>
-
-      <div class="container">
-        <a
-          style="text-decoration:none, background-color: #7A98C5"
-          href="donate-kits.html"
-        >
-          <button class="donate-button">
-            Donate
-          </button>
-        </a>
-        <p style="background-color: #7A98C5">
-          ------
-        </p>
-      </div>
-
-      <p style="background-color:#7A98C5">
-        <br />
-        ------<br />
-        Who Are We?<br /><br />
-      </p>
-
-      <div class="container">
-        <a
-          style="text-decoration:none, background-color: #7A98C5"
-          href="about.html"
-        >
-          <button class="about-us-button">
-            About Us
-          </button>
-        </a>
-      </div>
-      <p style="background-color: #7A98C5">
-        ------
-      </p>
-    </div>
-    <div class="homeless-man-image">
-    <img
-      style="display: block;  width: 420px; height:auto; display: block; margin-left: auto; margin-right: auto; background-color: #EF6D03"
-      src="https://cdn.glitch.com/ff57477a-cb3a-4447-b567-6b06dc7e9bc2%2Fdownload-1.jpg?1591941477008"
-      alt="Coding For Kids"
-    />
+      </center>
     </div>
 
-    <div class="part-three">
-      <p style="background-color:#163E7B">
-        -----<br />
-        Do you have any questions or <br />want to get involved? <br /><br />
+    <div id="branchclub" class="section2">
+      <center>
+      <p class="sectionTitle" style="color:white" >Branch Club Information</p>
+      <p class="sectionDescription" style="color:white" >Set up your own Coding4Kidz club at your school.</p>
+      <p style="text-align:center">
+        <a target="blank" style="right:10px" class="buttons" href="https://docs.google.com/forms/u/4/d/e/1FAIpQLSfLYv0UpnEPyhvb02XK3IabqGT8xsM9jewVE5LNXfpmeXtADw/viewform">Branch Club Form</a>
+        <a target="blank" style="left:10px" class="buttons" href="https://docs.google.com/document/d/1QN_RlaBIC_22vRLOWzTbtgxZyKsVrYRgwya5HjCVyeE/edit?usp=sharing">Branch Club Info</a>
+        <a target="blank" style="left:30px" class="buttons" href="images/flyers/branch-club-benefits.jpg">View Flyer</a>
       </p>
-
-      <div class="container-two">
-        <a style="text-decoration:none" href="contact.html">
-          <button class="contact-us-button">
-            Contact Us
-          </button>
-        </a>
-        <br />
-        <p>
-          -----
-        </p>
-      </div>
+      </center>
     </div>
-    <h6>
-      -----<br />
-      Copyright &copy; 2020 Coding For Kids<br />
-      -----
-    </h6>
 
-    <script src="script.js" defer></script>
+    <div id="dnhs" class="section3">
+      <center>
+      <p class="sectionTitle" >Del Norte High School Member Applications</p>
+      <p class="sectionDescription" >Apply to become a member of Coding4Kidz at <br> Del Norte High School in San Diego, California.</p>
+      <p>
+        <a target="blank" style="right:10px" class="buttons" href="http://bit.ly/c4k-apply">Application Form</a>
+        <a target="blank" style="left:10px" class="buttons" href="images/flyers/c4k-teacher-flyer.jpg" >View Flyer</a>
+      </p>
+      </center>
+    </div>
+
+    <div class="footer">
+      <center><p style="padding:4px;color:white; font-size:1em">Copyright &copy 2020 Coding4Kidz</p></center>
+    </div>
+
   </body>
-</html>
+  </html>
+<body style="background-color:#303030"> 
