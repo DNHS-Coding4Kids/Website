@@ -13,6 +13,7 @@ html  {
   position:relative;
   top:30px;
   box-shadow: 0px 0px 5px black;
+  animation: fadein 2s;
 }
 
 .sectionTitle {
@@ -20,11 +21,13 @@ html  {
   font-size:3em;
   padding-top:1em;
   padding-bottom:-1em;
+  animation: fadein 2s;
 }
 
 .sectionDescription {
   font-family: Itim;
   font-size:1.5em;
+  animation: fadein 2s;
 }
 
 
@@ -63,3 +66,19 @@ a.buttons:hover {
     color: #303030;
     text-decoration: none;
   }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body::-webkit-scrollbar {
+  width: 19px; /* width of the entire scrollbar */
+               
+}
+body::-webkit-scrollbar-track {
+  background: #303030; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg,#f8ac54, #cc8029); /* color of the scroll thumb */
+}
