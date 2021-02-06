@@ -2,16 +2,22 @@ html  {
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100%;
+  width:100%;
+}
+
+
 .buttons {
   background-color:#f8ac54;
   border-radius:18px;
   padding:10px;
+  margin:20px;
   color:#303030;
   font-weight:bold;
   font-family: Itim;
   font-size:1.5em;
-  position:relative;
-  top:30px;
+  position:static;
   box-shadow: 0px 0px 5px black;
   animation: fadein 2s;
 }
@@ -62,10 +68,11 @@ html  {
 }
 
 .footer {
-  position:relative;
+  position:absolute;
   background-color:#f8ac54;
-  width:100%;
-  display:inline-block;
+  min-width:100%;
+  margin-bottom:50px;
+  height:70px;
   box-shadow: 0px -1px 10px black;
 }
 
