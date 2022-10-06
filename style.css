@@ -44,7 +44,7 @@ html, body {
 
 }
 
-img.teamImage {
+.teamImage {
   border-radius: 5px 5px 0 0;
   height:300px;
   width:300px;
